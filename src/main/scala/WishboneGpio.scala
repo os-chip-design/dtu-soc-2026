@@ -24,16 +24,19 @@ class WishboneGpio(n: Int) extends Module {
     val oeb = Output(UInt (n.W))
   })
 
+  // registers to hold the output and oeb values
   val outReg = RegInit(0.U(n.W))
   val oebReg = RegInit(0.U(n.W))
 
-  val ackReg = RegInit(false.B)
+  // wishbone acknowledge register
+  val ackReg = RegInit(0.B)
   when(ackReg) {
     ackReg := 0.B
   }.elsewhen(wb.cyc && wb.stb) {
     ackReg := 1.B
   }
 
+  // address decoding for the registers
   val inAccess = wb.addr === 0.U
   val outAccess = wb.addr === 4.U
   val oebAccess = wb.addr === 8.U
@@ -41,9 +44,8 @@ class WishboneGpio(n: Int) extends Module {
   // input with two FFs to contain meta stability
   val syncedInput = RegNext(RegNext(io.in))
 
-  // wishbone combinational ack generation
+  // wishbone bus response logic
   wb.ack := ackReg
-  // wishbone data output logic
   wb.dout := MuxCase(0.U, Seq(
     inAccess -> syncedInput,
     outAccess -> outReg,

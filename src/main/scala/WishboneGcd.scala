@@ -25,7 +25,7 @@ class WishboneGcd(width: Int) extends Module {
   val dataAccess = wb.addr === 0.U
   val statusAccess = wb.addr === 4.U
 
-  val ackReg = RegInit(false.B)
+  val ackReg = RegInit(0.B)
   when(ackReg) {
     ackReg := 0.B
   }.elsewhen(wb.cyc && wb.stb) {

@@ -41,9 +41,12 @@ void main(){
 
     // TODO: enable wishbone interface
 
+    int res = 0;
     // TODO: wait until the value of the input is 0xAA
 
-    ManagmentGpio_write(1); // signal pass
-
+    if (res == 0xAA) {
+        ManagmentGpio_write(1); // signal pass
+    }
+    
     return;
 }
