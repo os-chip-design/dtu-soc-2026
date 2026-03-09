@@ -14,20 +14,23 @@
 
 #include <firmware_apis.h>
 
+// address of the gcd module in words
+#define GCD_ADDR (0x10000 >> 2) 
+
 int gcd_input_is_ready() {
-    return USER_readWord(0x0) & 0x2;
+    return USER_readWord(GCD_ADDR + 1) & 0x2;
 }
 
 int gcd_output_is_valid() {
-    return USER_readWord(0x0) & 0x1;
+    return USER_readWord(GCD_ADDR + 1) & 0x1;
 }
 
 void gcd_write_input(short a, short b) {
-    USER_writeWord(((int)a << 16) | (int)b, 0x1);
+    USER_writeWord(((int)a << 16) | (int)b, GCD_ADDR);
 }
 
 short gcd_read_output() {
-    return (short)(USER_readWord(0x1) & 0xFFFF);
+    return (short)(USER_readWord(GCD_ADDR) & 0xFFFF);
 }
 
 void main(){

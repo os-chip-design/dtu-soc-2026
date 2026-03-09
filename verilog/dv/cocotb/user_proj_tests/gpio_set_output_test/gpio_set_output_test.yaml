@@ -14,11 +14,8 @@
 
 # SPDX-License-Identifier: Apache-2.0
 
-# yaml file contain general design information that would mostly need to be updated in the first run only 
-includes: 
-    - gcd_example_test/gcd_example_test.yaml
-    - gpio_read_input_test/gpio_read_input_test.yaml
-    - gpio_set_output_test/gpio_set_output_test.yaml
-    - gpio_bidir_test/gpio_bidir_test.yaml
+# Yalm file contain general design information that would mostly need to be updated in the first run only 
+Tests: 
+    - {name: gpio_set_output_test, sim: RTL}
 
 

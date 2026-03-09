@@ -14,9 +14,8 @@ object CaravelTop extends App {
 
 class CaravelTop extends Module {
 
-  val WB_ADDR_WIDTH = 32
+  val WB_ADDR_WIDTH = 20
   val MPRJ_IO_PADS = 38
-  val LA_PINS = 128
 
   val wb = IO(new wishbone.WishboneIO(WB_ADDR_WIDTH, dataWidth = 32))
   val io = IO(new Bundle {
@@ -26,32 +25,31 @@ class CaravelTop extends Module {
   })
 
 
-  /// Dummy GCD module instantiation
+  // Dummy assignments to avoid unconnected IOs
+  io.out := 0.U
+  io.oeb := 0.U
 
-  val gcd = Module(new DecoupledGcd(16))
-  gcd.input.bits.value1 := wb.din(15, 0)
-  gcd.input.bits.value2 := wb.din(31, 16)
+  // TODO: instantiate the wishbone GPIO peripheral
+  // TODO: connect the GPIO peripheral to the Wishbone bus
+  // TODO: set the wb.cyc port to 0 as a default
+  // TODO: connect the GPIO peripheral's input and output ports to the top-level IO
 
-  val statusAccess = wb.addr(3,0) === 0.U
-  val accessOngoingReg = RegNext(wb.cyc && wb.stb, 0.B)
-  
-  gcd.input.valid := accessOngoingReg && wb.we && !statusAccess
-  gcd.output.ready := accessOngoingReg && !wb.we && !statusAccess
+  // create dummy gcd peripheral for testing
+  val gcd = Module(new WishboneGcd(16))
+  gcd.wb <> wb
+  gcd.wb.cyc := 0.B
 
-  wb.dout := Mux(
-    statusAccess,
-    gcd.input.ready ## gcd.output.valid,
-    gcd.output.bits.gcd
-  )
-  wb.ack := accessOngoingReg // Acknowledge in the next cycle
-
-
-
-  /// Outputs
-  io.out := gcd.output.bits.asUInt
-  io.oeb := 0.U // All outputs are enabled (active low)
-
-
-
-
+  // address decoding for the peripherals
+  // lower 16 bits of the address are used inside the peripherals, so we ignore them for decoding
+  // the upper 4 bits [19:16] are used for decoding
+  switch(wb.addr(WB_ADDR_WIDTH - 1, 16)) {
+    is(0x0.U) {
+      // TODO: connect the GPIO peripheral to the Wishbone bus
+    }
+    is(0x1.U) {
+      gcd.wb.cyc := wb.cyc
+      wb.ack := gcd.wb.ack
+      wb.dout := gcd.wb.dout
+    }
+  }
 }

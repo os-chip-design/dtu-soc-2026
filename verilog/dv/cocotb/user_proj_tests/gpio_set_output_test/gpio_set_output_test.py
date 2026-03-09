@@ -14,11 +14,19 @@
 
 # SPDX-License-Identifier: Apache-2.0
 
-# yaml file contain general design information that would mostly need to be updated in the first run only 
-includes: 
-    - gcd_example_test/gcd_example_test.yaml
-    - gpio_read_input_test/gpio_read_input_test.yaml
-    - gpio_set_output_test/gpio_set_output_test.yaml
-    - gpio_bidir_test/gpio_bidir_test.yaml
+
+from caravel_cocotb.caravel_interfaces import test_configure
+from caravel_cocotb.caravel_interfaces import report_test
+import cocotb
 
 
+@cocotb.test()
+@report_test
+async def gpio_set_output_test(dut):
+    caravelEnv = await test_configure(dut,timeout_cycles=27649)
+    await caravelEnv.wait_mgmt_gpio(1) # wait for caravel to signal that the output is set
+
+    out = caravelEnv.monitor_gpio(15,8).binstr
+    assert out == '01100110', f"Expected GPIO output to be 0x66, but got {out}"
+    
+    cocotb.log.info(f"[TEST] pass")
