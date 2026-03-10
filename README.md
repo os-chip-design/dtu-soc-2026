@@ -20,6 +20,12 @@ It includes a Chisel top-level module (`CaravelTop`) containing a simple GCD cal
 make chisel-generate
 ```
 
+To work with caravel, you will have to install the `cf-cli` tool and fetch dependencies using:
+```
+pip install chipfoundry-cli
+cf setup
+```
+
 The Chisel top-level is hardened separately as a macro which is placed into the Caravel `user_project_wrapper`. The configuration files for both are located in the `openlane/` directory. They are hardened using the following commands:
 
 ```
