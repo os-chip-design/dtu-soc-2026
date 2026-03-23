@@ -3,3 +3,4 @@ from user_proj_tests.gpio_bidir_test.gpio_bidir_test import gpio_bidir_test
 from user_proj_tests.gpio_read_input_test.gpio_read_input_test import gpio_read_input_test
 from user_proj_tests.gpio_set_output_test.gpio_set_output_test import gpio_set_output_test
 from user_proj_tests.wildcat_blink_test.wildcat_blink_test import wildcat_blink_test
+from user_proj_tests.mem_test.mem_test import mem_test

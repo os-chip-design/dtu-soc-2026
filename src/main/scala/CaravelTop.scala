@@ -62,4 +62,33 @@ class CaravelTop extends Module {
       wb.rdData := gcd.wb.rdData
     }
   }
+  val imem = Module(new Programmable_IMEM(depth = 8)) // depth = 1024 words
+  
+  // Set defaults first
+imem.io.wb.addr := 0.U
+imem.io.wb.wrData := 0.U
+imem.io.wb.we := false.B
+imem.io.wb.stb := false.B
+imem.io.wb.cyc := false.B
+imem.io.wb.sel := 0.U
+
+wb.ack := false.B
+wb.rdData := 0.U
+
+// Address decoding
+switch(wb.addr(WB_ADDR_WIDTH - 1, WB_ADDR_WIDTH - 4)) {
+  is(0x3.U) { 
+    // Connect bus signals to IMEM
+    imem.io.wb.addr := wb.addr
+    imem.io.wb.wrData := wb.wrData
+    imem.io.wb.we := wb.we
+    imem.io.wb.stb := wb.stb
+    imem.io.wb.cyc := wb.cyc
+    imem.io.wb.sel := wb.sel
+
+    // Connect back the outputs
+    wb.ack := imem.io.wb.ack
+    wb.rdData := imem.io.wb.rdData
+  }
+}
 }
