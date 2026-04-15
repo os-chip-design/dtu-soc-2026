@@ -1,6 +1,6 @@
 {
     "DESIGN_NAME": "CaravelUserProject",
-    "FP_PDN_MULTILAYER": false,
+    "FP_PDN_MULTILAYER": true,
     "VERILOG_FILES": [
         "ref::$DESIGN_DIR/../../verilog/rtl/CaravelUserProject.v"
     ],
@@ -69,22 +69,47 @@
     },
 
     "MACROS": {
-        "sky130_sram_1kbyte_1rw1r_32x256_8": {
-
-            "gds": [
-                "pdk_dir::libs.ref/sky130_sram_macros/gds/sky130_sram_1kbyte_1rw1r_32x256_8.gds"
-            ],
-            "lef": [
-                "pdk_dir::libs.ref/sky130_sram_macros/lef/sky130_sram_1kbyte_1rw1r_32x256_8.lef"
-            ],
-            "nl": [
-                "pdk_dir::libs.ref/sky130_sram_macros/verilog/sky130_sram_1kbyte_1rw1r_32x256_8.v"
-            ],
-            "lib": {
-                "*": "pdk_dir::libs.ref/sky130_sram_macros/lib/sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C.lib"
-            }
+    "sky130_sram_1kbyte_1rw1r_32x256_8": {
+        "gds": [
+            "pdk_dir::libs.ref/sky130_sram_macros/gds/sky130_sram_1kbyte_1rw1r_32x256_8.gds"
+        ],
+        "lef": [
+            "pdk_dir::libs.ref/sky130_sram_macros/lef/sky130_sram_1kbyte_1rw1r_32x256_8.lef"
+        ],
+        "nl": [
+            "pdk_dir::libs.ref/sky130_sram_macros/verilog/sky130_sram_1kbyte_1rw1r_32x256_8.v"
+        ],
+        "lib": {
+            "*": "pdk_dir::libs.ref/sky130_sram_macros/lib/sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C.lib"
         }
     },
-    "MAGIC_CAPTURE_ERRORS": false
+    "myconfig": {
+    "instances": {
+      "wc.dmem.sram": {
+        "location": [100, 100],
+        "orientation": "N"
+      }
+    },
+    "gds": [
+      "dir::../../macros/openram256/gds/myconfig.gds"
+    ],
+    "lef": [
+      "dir::../../macros/openram256/lef/myconfig.lef"
+    ],
+    "nl": [
+      "dir::../../macros/openram256/verilog/myconfig.v"
+    ],
+    "lib": {
+      "*": "dir::../../macros/openram256/lib/myconfig_TT_1p8V_25C.lib"
+    }
+  }
+},
+"FP_PDN_HPITCH": 51,
+"FP_PDN_VPITCH": 51,
+"PDN_MACRO_CONNECTIONS": [
+    "wc.dmem.sram vccd1 vssd1 vccd1 vssd1"
+],
+
+"MAGIC_CAPTURE_ERRORS": false
 
 }

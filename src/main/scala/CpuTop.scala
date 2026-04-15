@@ -15,7 +15,7 @@ import cache._
  * Edited by F26 02118
  *
  */
-class CpuTop(file: String, dmemNrByte: Int = 16) extends Module {
+class CpuTop(file: String, dmemNrByte: Int = 1024) extends Module {
   val io = IO(new Bundle {
     val led = Output(UInt(16.W))
     val tx = Output(UInt(1.W))
@@ -28,7 +28,7 @@ class CpuTop(file: String, dmemNrByte: Int = 16) extends Module {
   val cpu = Module(new ThreeCats())
   // val cpu = Module(new WildFour())
   // val cpu = Module(new StandardFive())
-  val dmem = Module(new ScratchPadMem(memory, nrBytes = dmemNrByte))
+  val dmem = Module(new OpenRamScratchPadMem(nrBytes = dmemNrByte))
   val imem = Module(new InstructionROM(memory))
   val cache = Module(new DataCache())
 
