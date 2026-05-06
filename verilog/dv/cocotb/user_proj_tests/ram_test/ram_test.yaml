@@ -1,0 +1,2 @@
+Tests:
+  - {name: ram_test, sim: RTL}

@@ -37,3 +37,4 @@ includes:
     - raytracer_write_test/raytracer_write_test.yaml
     - raytracer_mmio_test/raytracer_mmio_test.yaml
     - raytracer_uart_test/raytracer_uart_test.yaml
+    - ram_test/ram_test.yaml
