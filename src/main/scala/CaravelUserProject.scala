@@ -74,10 +74,6 @@ class CaravelUserProject extends Module {
   lukeClock.wb <> wb
   lukeClock.wb.cyc := 0.B
 
-  val snn = Module(new WishboneSnnPeripheral)
-  snn.wb <> wb
-  snn.wb.cyc := 0.B
-
   val spiPmod = Module(new WishboneSpiPmod)
   spiPmod.wb <> wb
   spiPmod.wb.cyc := 0.B
@@ -131,11 +127,6 @@ class CaravelUserProject extends Module {
       lukeClock.wb.cyc := wb.cyc
       wb.ack := lukeClock.wb.ack
       wb.rdData := lukeClock.wb.rdData
-    }
-    is(0x8.U) {
-      snn.wb.cyc := wb.cyc
-      wb.ack := snn.wb.ack
-      wb.rdData := snn.wb.rdData
     }
     is (0x5.U) {
       com.wb.cyc := wb.cyc

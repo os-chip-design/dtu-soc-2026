@@ -159,30 +159,6 @@
                 "*": [ "ref::$DESIGN_DIR/../../libs/sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C_modified.lib" ]
             }
         }
-        ,
-        "WishboneSnn": {
-            "instances": {
-                "snn.snn": {
-                    "location": [
-                        800,
-                        1700
-                    ],
-                    "orientation": "N"
-                }
-            },
-            "gds": [
-                "ref::$DESIGN_DIR/../../gds/WishboneSnn.gds"
-            ],
-            "lef": [
-                "ref::$DESIGN_DIR/../../lef/WishboneSnn.lef"
-            ],
-            "nl": [
-                "ref::$DESIGN_DIR/../../verilog/gl/WishboneSnn.v"
-            ],
-            "lib": {
-                "*": [ "ref::$DESIGN_DIR/../../lib/WishboneSnn.lib" ]
-            }
-        }
     },
     "VERILOG_POWER_DEFINE": "USE_POWER_PINS",
     "FP_PDN_CHECK_NODES": false,
@@ -202,8 +178,7 @@
         "wc.dmem.bank vccd1 vssd1 vccd1 vssd1",
         "wc.rayController.pf.mem vccd1 vssd1 vccd1 vssd1",
         "lc.imem.mem vccd1 vssd1 vccd1 vssd1",
-        "lc.dmem.mem vccd1 vssd1 vccd1 vssd1",
-        "snn.snn vccd1 vssd1 vccd1 vssd1"
+        "lc.dmem.mem vccd1 vssd1 vccd1 vssd1"
     ]
 }
 
