@@ -11,8 +11,8 @@
     "DIE_AREA": [
         0,
         0,
-        2800,
-        2000
+        2500,
+        2500
     ],
 
 
@@ -83,50 +83,50 @@
             "instances": {
                 "wc.imem.ram": {
                     "location": [
-                        100,
-                        150
+                        200,
+                        200
                     ],
                     "orientation": "N"
                 },
                 "wc.imem_2.mem": {
                     "location": [
-                        1100,
-                        150
+                        1000,
+                        200
                     ],
                     "orientation": "N"
                 },
                 "wc.vc.terminal.videoBuffer.mem": {
                     "location": [
-                        1630,
-                        150
+                        1800,
+                        200
                     ],
                     "orientation": "S"
                 },
                 "wc.dmem.bank": {
                     "location": [
-                        100,
-                        850
+                        200,
+                        1000
                     ],
                     "orientation": "N"
                 },
                 "wc.cache.dataRam": {
                     "location": [
-                        1100,
-                        850
+                        1800,
+                        1800
                     ],
                     "orientation": "N"
                 },
                 "wc.cache.metaRam": {
                     "location": [
-                        1630,
-                        850
+                        1800,
+                        1000
                     ],
                     "orientation": "N"
                 },
                 "wc.rayController.pf.mem": {
                     "location": [
-                        100,
-                        1400
+                        200,
+                        1800
                     ],
                     "orientation": "N"
                 },
@@ -157,7 +157,10 @@
             ],
             "lib": {
                 "*": [ "ref::$DESIGN_DIR/../../libs/sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C_modified.lib" ]
-            }
+            },
+            "spice": [
+                "pdk_dir::libs.ref/sky130_sram_macros/spice/sky130_sram_1kbyte_1rw1r_32x256_8.spice"
+            ]
         }
     },
     "VERILOG_POWER_DEFINE": "USE_POWER_PINS",
