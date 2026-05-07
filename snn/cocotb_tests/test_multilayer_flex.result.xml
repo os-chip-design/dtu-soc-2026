@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778001859" />
+    <testcase name="multilayer_flex_subgroup_inference" classname="test_multilayer_flex" file="/mnt/bigdrive/chip-design-mar/hej/dtu-soc-2026/snn/cocotb_tests/test_multilayer_flex.py" lineno="23" time="0.012341737747192383" sim_time_ns="204000000000" ratio_time="16529276847290.64" />
+    <testcase name="multilayer_flex_second_subgroup_addressing" classname="test_multilayer_flex" file="/mnt/bigdrive/chip-design-mar/hej/dtu-soc-2026/snn/cocotb_tests/test_multilayer_flex.py" lineno="53" time="0.011475324630737305" sim_time_ns="202000000000" ratio_time="17602987845671.188" />
+    <testcase name="multilayer_flex_clears_subthreshold_accumulators_between_runs" classname="test_multilayer_flex" file="/mnt/bigdrive/chip-design-mar/hej/dtu-soc-2026/snn/cocotb_tests/test_multilayer_flex.py" lineno="84" time="0.026608705520629883" sim_time_ns="490000000000" ratio_time="18415025850096.32" />
+  </testsuite>
+</testsuites>

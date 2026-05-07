@@ -1,0 +1,2 @@
+Tests:
+  - {name: snn_wishbone_test, sim: RTL}

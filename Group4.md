@@ -176,12 +176,14 @@ numbers live in [`openlane/RayTracerController/STATS.md`](openlane/RayTracerCont
 the headlines:
 
 - **Die area:** 1500 × 1500 µm = 2.25 mm² (1000 × 1000 fails placement).
-- **Utilization:** 50.4 % overall, 45.7 % stdcell-only.
+- **Floor usage:** core area 2.20 mm², total instance area **1.11 mm²**
+  (917 661 µm² stdcells + 190 713 µm² SRAM macro) — i.e. **50.4 %**
+  overall instance utilization, 45.7 % stdcell-only.
 - **Cell counts:** 97 038 std cells post-synth, 1 397 flip-flops, 1 SRAM
   macro, 184 178 total instances after PnR.
 - **Timing (100 ns clock):** setup WS **+25.93 ns** / hold WS **+0.40 ns**
-  at the slow corner — ~74 ns of headroom, so the area numbers are not
-  inflated by timing-driven sizing.
+  at the slow corner — i.e. ~26 ns of clock-period headroom, so the area numbers are not inflated by
+  timing-driven sizing.
 - **Power:** ~13.3 mW total (4.9 mW internal, 8.4 mW switching) at the
   nominal corner.
 - **Routing:** 4.31 m of wire, 0 DRC errors, 0 LVS errors, 0 design

@@ -1,0 +1,42 @@
+#ifndef SNN_WISHBONE_TEST_VECTORS_H
+#define SNN_WISHBONE_TEST_VECTORS_H
+
+#include <stdint.h>
+
+#define SNN_TEST_VECTOR_WORD_COUNT 28
+#define SNN_TEST_SPIKES_IN 0x000000FFu
+#define SNN_EXPECTED_SPIKES_OUT 0x00000001u
+#define SNN_EXPECTED_CONFIG_WORD 0x00004082u
+
+static const uint32_t snn_test_vector_words[SNN_TEST_VECTOR_WORD_COUNT] = {
+    0x00000002u,
+    0x00000008u,
+    0x00000008u,
+    0x00000004u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x10101010u,
+    0x00000040u,
+    0x00000000u,
+    0x00000000u,
+    0x00000000u,
+    0x00000000u,
+    0x00000000u,
+    0x00000000u,
+    0x00000000u
+};
+
+#endif
