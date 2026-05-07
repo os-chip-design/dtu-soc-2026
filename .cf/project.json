@@ -3,8 +3,8 @@
     "name": "DTU SoC 2026",
     "type": "digital",
     "user": "martin-schoeberl",
-    "version": "2",
-    "user_project_wrapper_hash": "7f44095c3007c46b87615f192e05a2406b438bfbc097b099c1d20f7089970d9a",
+    "version": "3",
+    "user_project_wrapper_hash": "4d3c8a702e4f5bbdd64dd4396b24719dafe151bce1b03e6d3a017caffd26c8a2",
     "submission_state": "Draft",
     "gpio_config": {
       "5": "13'h1808",
