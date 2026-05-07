@@ -217,6 +217,9 @@ class CpuTop(dmemNrByte: Int = 16) extends Module {
   // Reset gated on cpu_reset too so the firmware can re-arm the FSM after
   // the mgmt CPU loads IMEM (otherwise random IMEM bits can spuriously pulse
   // start during boot).
+    io.rayTx := false.B // rayTxUart.io.txd
+
+  /*
   val rayController = withReset(reset.asBool || io.cpu_reset) {
     Module(new RayTracerController)
   }
@@ -238,6 +241,7 @@ class CpuTop(dmemNrByte: Int = 16) extends Module {
   when (csRayController && (memRd || memWr)) {
     rayCtrlAckReg := true.B
   }
+  */
 
   // TODO: move to the bottom and have all devices in one statement
   // read mux for memory and IO devices
@@ -250,11 +254,13 @@ class CpuTop(dmemNrByte: Int = 16) extends Module {
     cpu.io.dmem.rdData := io.comReadData
   } .elsewhen(muxFpp) {
     cpu.io.dmem.rdData := fpp.io.rdData
+    /*
   } .elsewhen(muxRayController) {
     cpu.io.dmem.rdData := rayCtrlRdDataReg
+      */
   }
   // or reduce all ack signals
-  cpu.io.dmem.ack := dmem.io.ack || uartDevice.cpuPort.ack || ledDevice.cpuPort.ack || videoAckReg || commAckReg || fpp.io.ack || rayCtrlAckReg
+  cpu.io.dmem.ack := dmem.io.ack || uartDevice.cpuPort.ack || ledDevice.cpuPort.ack || videoAckReg || commAckReg || fpp.io.ack // || rayCtrlAckReg
 
   // ------------------------------------------------
   // Memory
