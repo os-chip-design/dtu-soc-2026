@@ -140,7 +140,7 @@
             },
 
             "gds": [
-                "pdk_dir::libs.ref/sky130_sram_macros/gds/sky130_sram_1kbyte_1rw1r_32x256_8.gds"
+                "ref::$DESIGN_DIR/../../gds/sky130_sram_1kbyte_1rw1r_32x256_8.gds"
             ],
             "lef": [
                 "pdk_dir::libs.ref/sky130_sram_macros/lef/sky130_sram_1kbyte_1rw1r_32x256_8.lef"
