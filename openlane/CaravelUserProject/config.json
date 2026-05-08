@@ -7,12 +7,14 @@
     ],
     "CLOCK_PERIOD": 100,
     "CLOCK_PORT": "clock",
+    "FP_CORE_UTIL": 40,
+    "PL_TARGET_DENSITY_PCT": 40,
     "FP_SIZING": "absolute",
     "DIE_AREA": [
         0,
         0,
         2825,
-        1700
+        1400
     ],
 
 
@@ -84,49 +86,49 @@
                 "wc.imem.ram": {
                     "location": [
                         50,
-                        100
+                        50
                     ],
                     "orientation": "N"
                 },
                 "wc.imem_2.mem": {
                     "location": [
-                        630,
-                        100
+                        650,
+                        50
                     ],
                     "orientation": "FN"
                 },
                 "wc.vc.terminal.videoBuffer.mem": {
                     "location": [
-                        1420,
-                        100
+                        1350,
+                        50
                     ],
                     "orientation": "S"
                 },
                 "wc.dmem.bank": {
                     "location": [
                         50,
-                        950
+                        900
                     ],
                     "orientation": "FN"
                 },
                 "wc.cache.dataRam": {
                     "location": [
-                        630,
-                        950
+                        650,
+                        900
                     ],
                     "orientation": "N"
                 },
                 "wc.cache.metaRam": {
                     "location": [
-                        1160,
-                        950
+                        1250,
+                        900
                     ],
                     "orientation": "N"
                 },
                 "lc.imem.mem": {
                     "location": [
                         2200,
-                        100
+                        200
                     ],
                     "orientation": "N"
                 },
@@ -140,7 +142,7 @@
             },
 
             "gds": [
-                "ref::$DESIGN_DIR/../../gds/sky130_sram_1kbyte_1rw1r_32x256_8.gds"
+                "pdk_dir::libs.ref/sky130_sram_macros/gds/sky130_sram_1kbyte_1rw1r_32x256_8.gds"
             ],
             "lef": [
                 "pdk_dir::libs.ref/sky130_sram_macros/lef/sky130_sram_1kbyte_1rw1r_32x256_8.lef"
