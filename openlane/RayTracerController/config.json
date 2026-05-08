@@ -3,7 +3,7 @@
     "FP_PDN_MULTILAYER": true,
     "FP_PDN_CORE_RING": true,
     "VERILOG_FILES": [
-        "ref::$DESIGN_DIR/../../verilog/rtl/RayTracerController.v"
+        "ref::$DESIGN_DIR/../../verilog/rtl/CaravelUserProject.v"
     ],
     "CLOCK_PERIOD": 100,
     "CLOCK_PORT": "clock",
