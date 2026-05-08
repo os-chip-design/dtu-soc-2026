@@ -14,7 +14,7 @@
         0,
         0,
         2825,
-        1400
+        2400
     ],
 
 
@@ -156,6 +156,20 @@
             "spice": [
                 "pdk_dir::libs.ref/sky130_sram_macros/spice/sky130_sram_1kbyte_1rw1r_32x256_8.spice"
             ]
+        },
+        "RayTracerController": {
+            "instances": {
+                "wc.rayController": {
+                    "location": [100, 1400],
+                    "orientation": "N"
+                }
+            },
+            "gds": ["dir::../../gds/RayTracerController.gds"],
+            "lef": ["dir::../../lef/RayTracerController.lef"],
+            "nl": ["dir::../../verilog/gl/RayTracerController.v"],
+            "lib": {
+                "*": [ "dir::../../lib/RayTracerController.lib" ]
+            }
         }
     },
     "VERILOG_POWER_DEFINE": "USE_POWER_PINS",
@@ -175,7 +189,8 @@
         "wc.imem_2.mem vccd1 vssd1 vccd1 vssd1",
         "wc.dmem.bank vccd1 vssd1 vccd1 vssd1",
         "lc.imem.mem vccd1 vssd1 vccd1 vssd1",
-        "lc.dmem.mem vccd1 vssd1 vccd1 vssd1"
+        "lc.dmem.mem vccd1 vssd1 vccd1 vssd1",
+        "wc.rayController vccd1 vssd1 vccd1 vssd1"
     ]
 }
 
