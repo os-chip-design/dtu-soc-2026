@@ -51,6 +51,7 @@ make chisel-generate
 The Chisel top-level is hardened separately as a macro which is placed into the Caravel `user_project_wrapper`. The configuration files for both are located in the `openlane/` directory. They are hardened using the following commands:
 
 ```
+cf harden RayTracerController
 cf harden CaravelUserProject
 cf harden user_project_wrapper
 ```
