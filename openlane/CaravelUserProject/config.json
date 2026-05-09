@@ -7,8 +7,8 @@
     ],
     "CLOCK_PERIOD": 100,
     "CLOCK_PORT": "clock",
-    "FP_CORE_UTIL": 40,
-    "PL_TARGET_DENSITY_PCT": 40,
+    "FP_CORE_UTIL": 37,
+    "PL_TARGET_DENSITY_PCT": 37,
     "FP_SIZING": "absolute",
     "DIE_AREA": [
         0,
