@@ -787,7 +787,7 @@
   },
   "oas_output": {
     "file": "tapeout/outputs/oas/caravel_26053d65.oas",
-    "hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1"
+    "hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd"
   },
   "paths": {
     "layout_image": "tapeout/outputs/images/caravel_layout.png"
@@ -915,29 +915,29 @@
           "MR_psdm.WID.2": 2,
           "MR_licon.SP.6": 3
         },
-        "timestamp": "2026-05-01T14:07:41.454106"
+        "timestamp": "2026-05-12T13:38:08.090909"
       },
-      "execution_time": 2113.370355606079,
+      "execution_time": 3358.4405698776245,
       "summary_generated": false,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T14:07:41.454202",
-      "last_updated": "2026-05-01T18:34:02.762389"
+      "timestamp": "2026-05-12T13:38:08.091000",
+      "last_updated": "2026-05-12T18:47:38.391004"
     },
     "be": {
       "check_name": "be",
       "status": "completed",
-      "success": true,
+      "success": false,
       "return_code": 0,
       "log_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/logs/klayout_be_check.log",
       "report_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/klayout_beol_check.xml",
       "report_summary": {
         "status": "completed",
-        "total_errors": 0,
+        "total_errors": 264,
         "rules_checked": 92,
-        "rules_with_violations": 0,
-        "rules_passed": 92,
+        "rules_with_violations": 1,
+        "rules_passed": 91,
         "all_rules": {
           "li.1": "li.1 : min. li width outside or crossing areaid:ce : 0.17um",
           "li.3": "li.3 : min. li spacing outside or crossing areaid:ce : 0.17um",
@@ -1032,16 +1032,18 @@
           "pad.2": "pad.2 : min. pad spacing : 1.27um",
           "moduleCut.1": "moduleCut.1 : moduleCut layer is for SkyWater use only"
         },
-        "violations": {},
-        "timestamp": "2026-05-01T15:45:49.158643"
+        "violations": {
+          "MR_mcon.CON.10": 264
+        },
+        "timestamp": "2026-05-12T15:25:54.767337"
       },
-      "execution_time": 5887.542958021164,
-      "summary_generated": true,
+      "execution_time": 6466.341280698776,
+      "summary_generated": false,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T15:45:49.259966",
-      "last_updated": "2026-05-01T18:34:02.762413"
+      "timestamp": "2026-05-12T15:25:54.767439",
+      "last_updated": "2026-05-12T18:47:38.391021"
     },
     "pd": {
       "check_name": "pd",
@@ -1060,15 +1062,15 @@
           "No Violations": "Poly density check completed successfully - no violations found"
         },
         "violations": {},
-        "timestamp": "2026-05-01T15:48:46.331870"
+        "timestamp": "2026-05-12T15:27:51.490900"
       },
-      "execution_time": 176.52695178985596,
+      "execution_time": 116.3980484008789,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T15:48:46.464260",
-      "last_updated": "2026-05-01T18:34:02.762424"
+      "timestamp": "2026-05-12T15:27:51.543756",
+      "last_updated": "2026-05-12T18:47:38.391030"
     },
     "md": {
       "check_name": "md",
@@ -1087,15 +1089,15 @@
           "No Violations": "Metal density check completed successfully - no violations found"
         },
         "violations": {},
-        "timestamp": "2026-05-01T16:25:58.975394"
+        "timestamp": "2026-05-12T16:10:54.851639"
       },
-      "execution_time": 2232.0091156959534,
+      "execution_time": 2582.985253095627,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T16:25:59.035153",
-      "last_updated": "2026-05-01T18:34:02.762428"
+      "timestamp": "2026-05-12T16:10:54.904582",
+      "last_updated": "2026-05-12T18:47:38.391034"
     },
     "mt": {
       "check_name": "mt",
@@ -1112,15 +1114,15 @@
         "rules_passed": 0,
         "all_rules": {},
         "violations": {},
-        "timestamp": "2026-05-01T16:32:41.113195"
+        "timestamp": "2026-05-12T16:17:25.919096"
       },
-      "execution_time": 401.8540654182434,
+      "execution_time": 390.68830275535583,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T16:32:41.209819",
-      "last_updated": "2026-05-01T18:34:02.762432"
+      "timestamp": "2026-05-12T16:17:25.971990",
+      "last_updated": "2026-05-12T18:47:38.391038"
     },
     "m1": {
       "check_name": "m1",
@@ -1144,15 +1146,15 @@
           "m1.fill.6": "m1.fill.6: m1 fill overlapping m1 drawn"
         },
         "violations": {},
-        "timestamp": "2026-05-01T16:52:53.569779"
+        "timestamp": "2026-05-12T16:37:50.984839"
       },
-      "execution_time": 1212.0222339630127,
+      "execution_time": 1224.6892161369324,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T16:52:53.625812",
-      "last_updated": "2026-05-01T18:34:02.762436"
+      "timestamp": "2026-05-12T16:37:51.076173",
+      "last_updated": "2026-05-12T18:47:38.391042"
     },
     "m2": {
       "check_name": "m2",
@@ -1176,15 +1178,15 @@
           "m2.fill.6": "m2.fill.6: m2 fill overlapping m2 drawn"
         },
         "violations": {},
-        "timestamp": "2026-05-01T17:12:24.173219"
+        "timestamp": "2026-05-12T17:09:25.675759"
       },
-      "execution_time": 1170.323473930359,
+      "execution_time": 1894.2717328071594,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T17:12:24.249237",
-      "last_updated": "2026-05-01T18:34:02.762442"
+      "timestamp": "2026-05-12T17:09:25.759271",
+      "last_updated": "2026-05-12T18:47:38.391046"
     },
     "m3": {
       "check_name": "m3",
@@ -1208,15 +1210,15 @@
           "m3.fill.6": "m3.fill.6: m3 fill overlapping m3 drawn"
         },
         "violations": {},
-        "timestamp": "2026-05-01T17:21:49.468229"
+        "timestamp": "2026-05-12T17:20:19.452149"
       },
-      "execution_time": 564.990364074707,
+      "execution_time": 653.2324559688568,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T17:21:49.562016",
-      "last_updated": "2026-05-01T18:34:02.762446"
+      "timestamp": "2026-05-12T17:20:19.496543",
+      "last_updated": "2026-05-12T18:47:38.391050"
     },
     "m4": {
       "check_name": "m4",
@@ -1240,15 +1242,15 @@
           "m4.fill.6": "m4.fill.6: m4 fill overlapping m4 drawn"
         },
         "violations": {},
-        "timestamp": "2026-05-01T17:36:07.881481"
+        "timestamp": "2026-05-12T17:30:59.974414"
       },
-      "execution_time": 858.0737791061401,
+      "execution_time": 640.2217268943787,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T17:36:07.986463",
-      "last_updated": "2026-05-01T18:34:02.762451"
+      "timestamp": "2026-05-12T17:31:00.072120",
+      "last_updated": "2026-05-12T18:47:38.391054"
     },
     "fl": {
       "check_name": "fl",
@@ -1269,15 +1271,15 @@
           "li/li1m overlap": "li and li1m layers must not overlap"
         },
         "violations": {},
-        "timestamp": "2026-05-01T17:38:34.274802"
+        "timestamp": "2026-05-12T17:34:18.307043"
       },
-      "execution_time": 146.0142948627472,
+      "execution_time": 197.86634755134583,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T17:38:34.334749",
-      "last_updated": "2026-05-01T18:34:02.762456"
+      "timestamp": "2026-05-12T17:34:18.365524",
+      "last_updated": "2026-05-12T18:47:38.391057"
     },
     "og": {
       "check_name": "og",
@@ -1370,15 +1372,15 @@
           "areaid_re_OFFGRID": "x.1b : OFFGRID vertex on areaid.re"
         },
         "violations": {},
-        "timestamp": "2026-05-01T17:51:57.556706"
+        "timestamp": "2026-05-12T17:56:52.179728"
       },
-      "execution_time": 803.0018970966339,
+      "execution_time": 1353.4798154830933,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T17:51:57.618186",
-      "last_updated": "2026-05-01T18:34:02.762460"
+      "timestamp": "2026-05-12T17:56:52.280631",
+      "last_updated": "2026-05-12T18:47:38.391061"
     },
     "sp": {
       "check_name": "sp",
@@ -1403,15 +1405,15 @@
           "m5 centerline spikes": "m5 centerline spikes: 0 backtracking errors (centerline point backtracks on previous segment)"
         },
         "violations": {},
-        "timestamp": "2026-05-01T17:52:25.953745"
+        "timestamp": "2026-05-12T17:57:39.866383"
       },
-      "execution_time": 28.103275775909424,
+      "execution_time": 47.2391517162323,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T17:52:26.014834",
-      "last_updated": "2026-05-01T18:34:02.762470"
+      "timestamp": "2026-05-12T17:57:39.921289",
+      "last_updated": "2026-05-12T18:47:38.391069"
     },
     "cs": {
       "check_name": "cs",
@@ -1430,15 +1432,15 @@
           "NO_CF_SRAM_CELLS": "0 errors found - no cells contain 'CF_SRAM'"
         },
         "violations": {},
-        "timestamp": "2026-05-01T17:52:54.545739"
+        "timestamp": "2026-05-12T17:58:28.612844"
       },
-      "execution_time": 28.29644513130188,
+      "execution_time": 48.35565114021301,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T17:52:54.606814",
-      "last_updated": "2026-05-01T18:34:02.762475"
+      "timestamp": "2026-05-12T17:58:28.673942",
+      "last_updated": "2026-05-12T18:47:38.391073"
     },
     "is": {
       "check_name": "is",
@@ -1457,42 +1459,44 @@
           "NO_S8TSSC_01024x032_CELLS": "0 errors found - no cells contain 'S8TSSC_01024x032'"
         },
         "violations": {},
-        "timestamp": "2026-05-01T17:53:24.112561"
+        "timestamp": "2026-05-12T17:59:11.169894"
       },
-      "execution_time": 29.278977632522583,
+      "execution_time": 42.14841413497925,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T17:53:24.174259",
-      "last_updated": "2026-05-01T18:34:02.762479"
+      "timestamp": "2026-05-12T17:59:11.216449",
+      "last_updated": "2026-05-12T18:47:38.391076"
     },
     "f1": {
       "check_name": "f1",
       "status": "completed",
-      "success": true,
+      "success": false,
       "return_code": 0,
       "log_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/logs/klayout_f1_check.log",
       "report_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/klayout_fom_density_700_check.xml",
       "report_summary": {
         "status": "completed",
-        "total_errors": 0,
+        "total_errors": 48,
         "rules_checked": 1,
-        "rules_with_violations": 0,
-        "rules_passed": 1,
+        "rules_with_violations": 1,
+        "rules_passed": 0,
         "all_rules": {
-          "No Violations": "FOM density check completed successfully - no violations found"
+          "Fail Low": "FOM density below minimum threshold (28.0%)"
         },
-        "violations": {},
-        "timestamp": "2026-05-01T17:54:31.355617"
+        "violations": {
+          "Fail Low": 48
+        },
+        "timestamp": "2026-05-12T18:00:23.483266"
       },
-      "execution_time": 66.95863342285156,
-      "summary_generated": true,
+      "execution_time": 71.93424606323242,
+      "summary_generated": false,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T17:54:31.419712",
-      "last_updated": "2026-05-01T18:34:02.762483"
+      "timestamp": "2026-05-12T18:00:23.483349",
+      "last_updated": "2026-05-12T18:47:38.391080"
     },
     "f2": {
       "check_name": "f2",
@@ -1511,15 +1515,15 @@
           "No Violations": "FOM density check completed successfully - no violations found"
         },
         "violations": {},
-        "timestamp": "2026-05-01T17:55:33.004578"
+        "timestamp": "2026-05-12T18:01:44.178803"
       },
-      "execution_time": 61.35158729553223,
+      "execution_time": 80.36511301994324,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T17:55:33.075246",
-      "last_updated": "2026-05-01T18:34:02.762487"
+      "timestamp": "2026-05-12T18:01:44.233718",
+      "last_updated": "2026-05-12T18:47:38.391084"
     },
     "mc": {
       "check_name": "mc",
@@ -1538,15 +1542,15 @@
           "NO_MISSING_CELLS": "0 errors found - no missing cells detected"
         },
         "violations": {},
-        "timestamp": "2026-05-01T17:56:54.832139"
+        "timestamp": "2026-05-12T18:04:56.632076"
       },
-      "execution_time": 81.5317006111145,
+      "execution_time": 192.06362295150757,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T17:56:54.901225",
-      "last_updated": "2026-05-01T18:34:02.762491"
+      "timestamp": "2026-05-12T18:04:56.729829",
+      "last_updated": "2026-05-12T18:47:38.391088"
     },
     "ul": {
       "check_name": "ul",
@@ -1565,15 +1569,15 @@
           "Undefined Layers": "Layers not defined in SKY130A PDK"
         },
         "violations": {},
-        "timestamp": "2026-05-01T18:19:02.909599"
+        "timestamp": "2026-05-12T18:34:02.852491"
       },
-      "execution_time": 1327.7783062458038,
+      "execution_time": 1745.7629957199097,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T18:19:02.994142",
-      "last_updated": "2026-05-01T18:34:02.762496"
+      "timestamp": "2026-05-12T18:34:02.912992",
+      "last_updated": "2026-05-12T18:47:38.391091"
     },
     "bd": {
       "check_name": "bd",
@@ -1585,19 +1589,19 @@
         "status": "completed",
         "total_errors": 0,
         "check_passed": true,
-        "density_info": "PASS: Density range delta 10.74% is within allowed delta of 15.0%",
+        "density_info": "PASS: Density range delta 14.07% is within allowed delta of 15.0%",
         "rules_checked": 1,
         "rules_with_violations": 0,
         "rules_passed": 1,
         "violations": {},
-        "timestamp": "2026-05-01T18:19:03.050076"
+        "timestamp": "2026-05-12T18:34:02.966736"
       },
-      "execution_time": 0.002105712890625,
+      "execution_time": 0.0022869110107421875,
       "summary_generated": false,
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T18:19:03.050126",
-      "last_updated": "2026-05-01T18:34:02.762499"
+      "timestamp": "2026-05-12T18:34:02.966775",
+      "last_updated": "2026-05-12T18:47:38.391095"
     },
     "ld": {
       "check_name": "ld",
@@ -1609,19 +1613,19 @@
         "status": "completed",
         "total_errors": 0,
         "check_passed": true,
-        "density_info": "PASS: Density range delta 20.55% is within allowed delta of 30.0%",
+        "density_info": "PASS: Density range delta 23.61% is within allowed delta of 30.0%",
         "rules_checked": 1,
         "rules_with_violations": 0,
         "rules_passed": 1,
         "violations": {},
-        "timestamp": "2026-05-01T18:19:03.105420"
+        "timestamp": "2026-05-12T18:34:03.030614"
       },
-      "execution_time": 0.002220630645751953,
+      "execution_time": 0.0022988319396972656,
       "summary_generated": false,
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T18:19:03.105467",
-      "last_updated": "2026-05-01T18:34:02.762503"
+      "timestamp": "2026-05-12T18:34:03.030654",
+      "last_updated": "2026-05-12T18:47:38.391099"
     },
     "ic": {
       "check_name": "ic",
@@ -1640,15 +1644,15 @@
           "NO_INVALID_CELLS": "0 errors found - no cells contain invalid characters"
         },
         "violations": {},
-        "timestamp": "2026-05-01T18:19:42.971938"
+        "timestamp": "2026-05-12T18:34:51.231220"
       },
-      "execution_time": 39.607759952545166,
+      "execution_time": 47.84432673454285,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T18:19:43.069122",
-      "last_updated": "2026-05-01T18:34:02.762507"
+      "timestamp": "2026-05-12T18:34:51.290660",
+      "last_updated": "2026-05-12T18:47:38.391103"
     },
     "rr": {
       "check_name": "rr",
@@ -1667,15 +1671,15 @@
           "R1C_NOT_FOUND": "0 shapes found on layer 201:20"
         },
         "violations": {},
-        "timestamp": "2026-05-01T18:20:22.251246"
+        "timestamp": "2026-05-12T18:35:39.346726"
       },
-      "execution_time": 38.87773656845093,
+      "execution_time": 47.705337047576904,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T18:20:22.347081",
-      "last_updated": "2026-05-01T18:34:02.762512"
+      "timestamp": "2026-05-12T18:35:39.406913",
+      "last_updated": "2026-05-12T18:47:38.391106"
     },
     "os": {
       "check_name": "os",
@@ -1696,15 +1700,15 @@
         "violations": {
           "OPEN_SRAM_MACRO": 151
         },
-        "timestamp": "2026-05-01T18:21:03.568054"
+        "timestamp": "2026-05-12T18:36:28.521137"
       },
-      "execution_time": 40.89874815940857,
+      "execution_time": 48.76253318786621,
       "summary_generated": false,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T18:21:03.568136",
-      "last_updated": "2026-05-01T18:34:02.762517"
+      "timestamp": "2026-05-12T18:36:28.521221",
+      "last_updated": "2026-05-12T18:47:38.391110"
     },
     "id": {
       "check_name": "id",
@@ -1717,18 +1721,18 @@
       "report_summary": {
         "status": "completed",
         "check_passed": true,
-        "timestamp": "2026-05-01T18:21:45.895759",
+        "timestamp": "2026-05-12T18:37:21.667923",
         "visual_id": "26053D65",
         "electrical_id": "26053D65",
         "errors": []
       },
-      "execution_time": 41.95403456687927,
+      "execution_time": 52.73644948005676,
       "summary_generated": false,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T18:21:45.895898",
-      "last_updated": "2026-05-01T18:34:02.762521"
+      "timestamp": "2026-05-12T18:37:21.668020",
+      "last_updated": "2026-05-12T18:47:38.391114"
     },
     "gp": {
       "check_name": "gp",
@@ -1741,7 +1745,7 @@
       "report_summary": {
         "status": "completed",
         "check_passed": true,
-        "timestamp": "2026-05-01T18:22:30.088074",
+        "timestamp": "2026-05-12T18:38:23.918395",
         "gpio_configs": [
           {
             "gpio": "GPIO_5",
@@ -1769,66 +1773,66 @@
           },
           {
             "gpio": "GPIO_8",
-            "layout_config": "1800",
-            "rtl_config": "1800",
-            "layout_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
-            "rtl_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
+            "layout_config": "1808",
+            "rtl_config": "1808",
+            "layout_mode": "GPIO_MODE_USER_STD_OUTPUT",
+            "rtl_mode": "GPIO_MODE_USER_STD_OUTPUT",
             "result": "Matches"
           },
           {
             "gpio": "GPIO_9",
-            "layout_config": "1800",
-            "rtl_config": "1800",
-            "layout_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
-            "rtl_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
+            "layout_config": "1808",
+            "rtl_config": "1808",
+            "layout_mode": "GPIO_MODE_USER_STD_OUTPUT",
+            "rtl_mode": "GPIO_MODE_USER_STD_OUTPUT",
             "result": "Matches"
           },
           {
             "gpio": "GPIO_10",
-            "layout_config": "1800",
-            "rtl_config": "1800",
-            "layout_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
-            "rtl_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
+            "layout_config": "0801",
+            "rtl_config": "0801",
+            "layout_mode": "GPIO_MODE_MGMT_STD_INPUT_PULLUP",
+            "rtl_mode": "GPIO_MODE_MGMT_STD_INPUT_PULLUP",
             "result": "Matches"
           },
           {
             "gpio": "GPIO_11",
-            "layout_config": "1800",
-            "rtl_config": "1800",
-            "layout_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
-            "rtl_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
+            "layout_config": "0801",
+            "rtl_config": "0801",
+            "layout_mode": "GPIO_MODE_MGMT_STD_INPUT_PULLUP",
+            "rtl_mode": "GPIO_MODE_MGMT_STD_INPUT_PULLUP",
             "result": "Matches"
           },
           {
             "gpio": "GPIO_12",
-            "layout_config": "1800",
-            "rtl_config": "1800",
-            "layout_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
-            "rtl_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
+            "layout_config": "0801",
+            "rtl_config": "0801",
+            "layout_mode": "GPIO_MODE_MGMT_STD_INPUT_PULLUP",
+            "rtl_mode": "GPIO_MODE_MGMT_STD_INPUT_PULLUP",
             "result": "Matches"
           },
           {
             "gpio": "GPIO_13",
-            "layout_config": "1800",
-            "rtl_config": "1800",
-            "layout_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
-            "rtl_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
+            "layout_config": "1808",
+            "rtl_config": "1808",
+            "layout_mode": "GPIO_MODE_USER_STD_OUTPUT",
+            "rtl_mode": "GPIO_MODE_USER_STD_OUTPUT",
             "result": "Matches"
           },
           {
             "gpio": "GPIO_14",
-            "layout_config": "1800",
-            "rtl_config": "1800",
-            "layout_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
-            "rtl_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
+            "layout_config": "0801",
+            "rtl_config": "0801",
+            "layout_mode": "GPIO_MODE_MGMT_STD_INPUT_PULLUP",
+            "rtl_mode": "GPIO_MODE_MGMT_STD_INPUT_PULLUP",
             "result": "Matches"
           },
           {
             "gpio": "GPIO_15",
-            "layout_config": "1800",
-            "rtl_config": "1800",
-            "layout_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
-            "rtl_mode": "GPIO_MODE_USER_STD_BIDIRECTIONAL",
+            "layout_config": "1808",
+            "rtl_config": "1808",
+            "layout_mode": "GPIO_MODE_USER_STD_OUTPUT",
+            "rtl_mode": "GPIO_MODE_USER_STD_OUTPUT",
             "result": "Matches"
           },
           {
@@ -1849,10 +1853,10 @@
           },
           {
             "gpio": "GPIO_18",
-            "layout_config": "1808",
-            "rtl_config": "1808",
-            "layout_mode": "GPIO_MODE_USER_STD_OUTPUT",
-            "rtl_mode": "GPIO_MODE_USER_STD_OUTPUT",
+            "layout_config": "0402",
+            "rtl_config": "0402",
+            "layout_mode": "GPIO_MODE_USER_STD_INPUT_NOPULL",
+            "rtl_mode": "GPIO_MODE_USER_STD_INPUT_NOPULL",
             "result": "Matches"
           },
           {
@@ -2010,13 +2014,13 @@
         ],
         "errors": []
       },
-      "execution_time": 43.82179403305054,
+      "execution_time": 61.8005211353302,
       "summary_generated": false,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T18:22:30.098948",
-      "last_updated": "2026-05-01T18:34:02.762525"
+      "timestamp": "2026-05-12T18:38:23.932984",
+      "last_updated": "2026-05-12T18:47:38.391118"
     },
     "cl": {
       "check_name": "cl",
@@ -2039,15 +2043,15 @@
           "nwell space to urpm": "nwell space to urpm: min. nwell spacing to urpm 0.7um"
         },
         "violations": {},
-        "timestamp": "2026-05-01T18:26:32.672473"
+        "timestamp": "2026-05-12T18:43:50.456302"
       },
-      "execution_time": 242.34575152397156,
+      "execution_time": 326.0627534389496,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/tapeout/outputs/oas/caravel_26053d65.oas",
-      "input_file_hash": "53db13ae34ce2b7bb7d4c5c5554043d5f4ad35031351bff1612c1fb469765df1",
+      "input_file_hash": "e6cab44c15ba324d1795db5f62313ed9f4b7d098262c4329f8128b13d47717fd",
       "hash_source": "oasis",
-      "timestamp": "2026-05-01T18:26:32.764356",
-      "last_updated": "2026-05-01T18:34:02.762539"
+      "timestamp": "2026-05-12T18:43:50.528043",
+      "last_updated": "2026-05-12T18:47:38.391129"
     },
     "bc": {
       "check_name": "bc",
@@ -2066,15 +2070,50 @@
           "boundary.1": "boundary.1 : No XOR violations found - PR boundary areas match reference"
         },
         "violations": {},
-        "timestamp": "2026-05-01T18:34:02.662577"
+        "timestamp": "2026-05-12T18:47:38.327500"
       },
-      "execution_time": 449.1669669151306,
+      "execution_time": 224.83870697021484,
       "summary_generated": true,
       "input_file": "/mnt/shuttle/ci2605/martin-schoeberl/DTU-SoC-2026/gds/user_project_wrapper.gds",
-      "input_file_hash": "7f44095c3007c46b87615f192e05a2406b438bfbc097b099c1d20f7089970d9a",
+      "input_file_hash": "d2ce7b9ae000d444e7687f40eaaad11d3865e79d689a1d35df577426f4881594",
       "hash_source": "input_file",
-      "timestamp": "2026-05-01T18:34:02.759155",
-      "last_updated": "2026-05-01T18:34:02.762544"
+      "timestamp": "2026-05-12T18:47:38.387753",
+      "last_updated": "2026-05-12T18:47:38.391134"
     }
-  }
+  },
+  "drc_invalidation_history": [
+    {
+      "invalidated_at": "2026-05-11T13:37:21.580990",
+      "invalidated_checks": [
+        "fe",
+        "be",
+        "pd",
+        "md",
+        "mt",
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "fl",
+        "og",
+        "sp",
+        "cs",
+        "is",
+        "f1",
+        "f2",
+        "mc",
+        "ul",
+        "bd",
+        "ld",
+        "ic",
+        "rr",
+        "os",
+        "id",
+        "gp",
+        "cl",
+        "bc"
+      ],
+      "total_checks": 27
+    }
+  ]
 }
