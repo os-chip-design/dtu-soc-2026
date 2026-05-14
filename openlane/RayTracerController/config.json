@@ -11,9 +11,14 @@
     "DIE_AREA": [
         0,
         0,
-        2500,
-        1000
+        2700,
+        900
     ],
+    "DECAP_CELL": [
+        "sky130_ef_sc_hd__decap_40_12"
+    ],
+
+    "FP_CORE_UTIL": 50,
 
 
     "GRT_ANTENNA_MARGIN": 15,
@@ -27,7 +32,7 @@
 
 
     "MAX_TRANSITION_CONSTRAINT": 1.0,
-    "MAX_FANOUT_CONSTRAINT": 8,
+    "MAX_FANOUT_CONSTRAINT": 16,
     "PL_RESIZER_SETUP_SLACK_MARGIN": 0.4,
     "GRT_RESIZER_SETUP_SLACK_MARGIN": 0.2,
     "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.2,
@@ -49,32 +54,6 @@
     "MAGIC_DRC_USE_GDS": true,
     "DPL_CELL_PADDING": 2,
     "GPL_CELL_PADDING": 2,
-    "pdk::sky130*": {
-        "RT_MAX_LAYER": "met4",
-        "scl::sky130_fd_sc_hd": {
-            "CLOCK_PERIOD": 100
-        },
-        "scl::sky130_fd_sc_hdll": {
-            "CLOCK_PERIOD": 10
-        },
-        "scl::sky130_fd_sc_hs": {
-            "CLOCK_PERIOD": 8
-        },
-        "scl::sky130_fd_sc_ls": {
-            "CLOCK_PERIOD": 10,
-            "SYNTH_MAX_FANOUT": 5
-        },
-        "scl::sky130_fd_sc_ms": {
-            "CLOCK_PERIOD": 10
-        }
-    },
-    "pdk::gf180mcuC": {
-        "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
-        "CLOCK_PERIOD": 24.0,
-        "RT_MAX_LAYER": "Metal4",
-        "SYNTH_MAX_FANOUT": 4,
-        "PL_TARGET_DENSITY_PCT": 45
-    },
     "meta": {
         "version": 2
     },
@@ -84,8 +63,8 @@
             "instances": {
                 "pf.mem": {
                     "location": [
-                        100,
-                        120
+                        60,
+                        60
                     ],
                     "orientation": "N"
                 }
