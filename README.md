@@ -48,6 +48,10 @@ The project includes a Chisel top-level module (`CaravelUserProject`) containing
 make chisel-generate
 ```
 
+The project contains a fixed OpenRAM macro. To avoid picking up the default OpenRAM macro delete the macros form the PDK (in dependencies/...)
+
+```
+
 The Chisel top-level is hardened separately as a macro which is placed into the Caravel `user_project_wrapper`. The configuration files for both are located in the `openlane/` directory. They are hardened using the following commands:
 
 ```
