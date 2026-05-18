@@ -482,6 +482,7 @@ chisel-generate-rv32e:
 chisel-generate:
 	$(CROSS)as -march rv32ia_zicsr $(APP) -o a.o
 	$(CROSS)ld -m elf32lriscv -T wildcat/link.ld a.o -o a.out
+	$(MAKE) -C picomesh comp
 	sbt "runMain CaravelUserProject"
 
 chisel-generate-fpga:

@@ -48,7 +48,7 @@ The project includes a Chisel top-level module (`CaravelUserProject`) containing
 make chisel-generate
 ```
 
-The project contains a fixed OpenRAM macro. To avoid picking up the default OpenRAM macro delete the macros form the PDK (in dependencies/...)
+The project contains a fixed OpenRAM macro. To avoid picking up the default OpenRAM macro delete the macros from the PDK (in dependencies/...)
 
 ```
 
@@ -56,6 +56,7 @@ The Chisel top-level is hardened separately as a macro which is placed into the 
 
 ```
 cf harden RayTracerController
+cf harden PicoMeshBigTop
 cf harden CaravelUserProject
 cf harden user_project_wrapper
 ```

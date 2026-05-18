@@ -24,6 +24,7 @@
 	],
 	"LVS_VERILOG_FILES": [
                 "$UPRJ_ROOT/verilog/gl/RayTracerController.v",
+								"$UPRJ_ROOT/verilog/gl/PicoMeshBigTop.v",
 		"$UPRJ_ROOT/verilog/gl/CaravelUserProject.v",
 		"$UPRJ_ROOT/verilog/gl/$TOP_SOURCE.v"
 	],

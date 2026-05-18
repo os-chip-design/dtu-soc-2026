@@ -13,6 +13,7 @@ class comm_controller() extends Module {
   val cpu_reset = IO(Output(Bool()))
   val imem_sel = IO(Output(Bool()))
   val vga_sel = IO(Output(Bool()))
+  val picoMeshUartSel = IO(Output(Bool()))
 
   val ackReg = RegInit(false.B)
   val reset_reg = RegInit(0.U(32.W))
@@ -37,4 +38,5 @@ class comm_controller() extends Module {
   cpu_reset := reset_reg(0)
   imem_sel := reset_reg(1)
   vga_sel := reset_reg(2)
+  picoMeshUartSel := reset_reg(3)
 }
