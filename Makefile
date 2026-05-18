@@ -482,6 +482,7 @@ chisel-generate-rv32e:
 chisel-generate:
 	$(CROSS)as -march rv32ia_zicsr $(APP) -o a.o
 	$(CROSS)ld -m elf32lriscv -T wildcat/link.ld a.o -o a.out
+	$(MAKE) -C picomesh comp
 	sbt "runMain CaravelUserProject"
 
 chisel-generate-fpga:
@@ -491,3 +492,14 @@ chisel-generate-fpga:
 
 chisel-test:
 	sbt test
+
+
+all:
+	git pull
+	git submodule update --init --recursive
+	make chisel-generate
+	cf harden RayTracerController
+	cf harden PicoMeshBigTop
+	cf harden CaravelUserProject
+	cf harden user_project_wrapper
+	cf precheck

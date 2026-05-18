@@ -41,6 +41,23 @@ class CaravelUserProject extends Module {
   val led = wc.io.led
   val tx = wc.io.tx
 
+
+  /*
+    * A 6-core PicoRV32 system connected by a S4NoC.
+    * 
+    * Contains 2kiB of system memory.
+    * 
+    * Access through the ponte UART-bridge which gives access to the whole
+    * system address space.
+    * 
+    * Source is contained in the `picomesh` directory
+    *
+    */
+  val picoMesh = Module(new PicoMeshBigTop(
+    "picomesh/build/bootloader/bootloader.bin",
+    "picomesh/build/rom/rom.bin"
+  ))
+
   // create dummy gpio peripheral for testing
   /*
   val gpio = Module(new WishboneGpio(8))
@@ -141,7 +158,7 @@ class CaravelUserProject extends Module {
   val oebVec = WireInit(VecInit(Seq.fill(MPRJ_IO_PADS)(0.U(1.W))))
 
   // UART TX on pin 7
-  outVec(7) := tx
+  outVec(7) := Mux(comm.picoMeshUartSel, RegNext(RegNext(RegNext(picoMesh.io.ponteTx))), tx)
 
   // LitlleCat on pins 8..15
   outVec(8) := lc.io.out(0)
@@ -171,6 +188,7 @@ class CaravelUserProject extends Module {
 
   // UART RX on pin 25
   wc.io.rx := io.in(25)
+  picoMesh.io.ponteRx := RegNext(RegNext(RegNext(io.in(25))))
   oebVec(25) := true.B
 
   // QSPI pmod: primary SPI on 29..26, PSRAM chip selects on 23..22

@@ -4,3 +4,6 @@
 [submodule "FloatingPointUnit"]
 	path = FloatingPointUnit
 	url = https://github.com/sebasabes2/FloatingPointUnit.git
+[submodule "picomesh"]
+	path = picomesh
+	url = https://github.com/tjarker/picomesh.git

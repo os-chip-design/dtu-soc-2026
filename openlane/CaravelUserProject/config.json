@@ -7,22 +7,21 @@
     ],
     "CLOCK_PERIOD": 100,
     "CLOCK_PORT": "clock",
-    "FP_CORE_UTIL": 37,
-    "PL_TARGET_DENSITY_PCT": 37,
+    "FP_CORE_UTIL": 35,
+    "PL_TARGET_DENSITY_PCT": 35,
     "FP_SIZING": "absolute",
     "DIE_AREA": [
         0,
         0,
         2825,
-        2400
+        3480
     ],
 
-
-    "GRT_ANTENNA_MARGIN": 20,
-    "DESIGN_REPAIR_MAX_SLEW_PCT": 20,
-    "DESIGN_REPAIR_MAX_CAP_PCT": 20,
-    "GRT_DESIGN_REPAIR_MAX_SLEW_PCT": 20,
-    "GRT_DESIGN_REPAIR_MAX_CAP_PCT": 20,
+    "GRT_ANTENNA_MARGIN": 17,
+    "DESIGN_REPAIR_MAX_SLEW_PCT": 15,
+    "DESIGN_REPAIR_MAX_CAP_PCT": 15,
+    "GRT_DESIGN_REPAIR_MAX_SLEW_PCT": 15,
+    "GRT_DESIGN_REPAIR_MAX_CAP_PCT": 15,
 
 
     "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
@@ -99,7 +98,7 @@
                 },
                 "wc.vc.terminal.videoBuffer.mem": {
                     "location": [
-                        1350,
+                        1400,
                         50
                     ],
                     "orientation": "S"
@@ -107,35 +106,35 @@
                 "wc.dmem.bank": {
                     "location": [
                         50,
-                        900
+                        880
                     ],
                     "orientation": "FN"
                 },
                 "wc.cache.dataRam": {
                     "location": [
-                        650,
-                        900
+                        840,
+                        880
                     ],
                     "orientation": "N"
                 },
                 "wc.cache.metaRam": {
                     "location": [
-                        1250,
-                        900
+                        1420,
+                        880
                     ],
                     "orientation": "N"
                 },
                 "lc.imem.mem": {
                     "location": [
                         2200,
-                        200
+                        190
                     ],
                     "orientation": "N"
                 },
                 "lc.dmem.mem": {
                     "location": [
                         2200,
-                        900
+                        880
                     ],
                     "orientation": "N"
                 }
@@ -160,7 +159,7 @@
         "RayTracerController": {
             "instances": {
                 "wc.rayController": {
-                    "location": [100, 1400],
+                    "location": [70, 1350],
                     "orientation": "N"
                 }
             },
@@ -169,6 +168,20 @@
             "nl": ["dir::../../verilog/gl/RayTracerController.v"],
             "lib": {
                 "*": [ "dir::../../lib/RayTracerController.lib" ]
+            }
+        },
+        "PicoMeshBigTop": {
+            "instances": {
+                "picoMesh": {
+                    "location": [70, 2260],
+                    "orientation": "N"
+                }
+            },
+            "gds": ["dir::../../gds/PicoMeshBigTop.gds"],
+            "lef": ["dir::../../lef/PicoMeshBigTop.lef"],
+            "nl": ["dir::../../verilog/gl/PicoMeshBigTop.v"],
+            "lib": {
+                "*": [ "dir::../../lib/PicoMeshBigTop.lib" ]
             }
         }
     },
@@ -190,7 +203,8 @@
         "wc.dmem.bank vccd1 vssd1 vccd1 vssd1",
         "lc.imem.mem vccd1 vssd1 vccd1 vssd1",
         "lc.dmem.mem vccd1 vssd1 vccd1 vssd1",
-        "wc.rayController vccd1 vssd1 vccd1 vssd1"
+        "wc.rayController vccd1 vssd1 vccd1 vssd1",
+        "picoMesh vccd1 vssd1 vccd1 vssd1"
     ]
 }
 

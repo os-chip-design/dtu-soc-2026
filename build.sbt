@@ -10,6 +10,7 @@ Compile / unmanagedSourceDirectories += baseDirectory.value / "wildcat/src"
 Compile / unmanagedSourceDirectories += baseDirectory.value / "wildcat/soc-comm/src"
 Compile / unmanagedSourceDirectories += baseDirectory.value / "wildcat/ip-contributions/src"
 Compile / unmanagedSourceDirectories += baseDirectory.value / "FloatingPointUnit/src"
+Compile / unmanagedSourceDirectories += baseDirectory.value / "picomesh/src"
 
 scalaVersion := "2.13.14"
 val chiselVersion = "3.6.1"
