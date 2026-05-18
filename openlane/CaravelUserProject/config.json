@@ -177,11 +177,11 @@
                     "orientation": "N"
                 }
             },
-            "gds": ["dir::../../picomesh/build/layout/PicoMeshBigTop/gds/PicoMeshBigTop.gds"],
-            "lef": ["dir::../../picomesh/build/layout/PicoMeshBigTop/lef/PicoMeshBigTop.lef"],
-            "nl": ["dir::../../picomesh/build/layout/PicoMeshBigTop/pnl/PicoMeshBigTop.pnl.v"],
+            "gds": ["dir::../../gds/PicoMeshBigTop.gds"],
+            "lef": ["dir::../../lef/PicoMeshBigTop.lef"],
+            "nl": ["dir::../../verilog/gl/PicoMeshBigTop.v"],
             "lib": {
-                "*": [ "dir::../../picomesh/build/layout/PicoMeshBigTop/lib/nom_tt_025C_1v80/PicoMeshBigTop__nom_tt_025C_1v80.lib" ]
+                "*": [ "dir::../../lib/PicoMeshBigTop.lib" ]
             }
         }
     },
