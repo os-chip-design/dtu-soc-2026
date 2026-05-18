@@ -61,6 +61,8 @@ cf harden CaravelUserProject
 cf harden user_project_wrapper
 ```
 
+There is a Make target (`make all`) which runs all the above commands in sequence form `git pull` until `cf precheck`.
+
 You can use `nix run` to run part of LibreLane wihout cloning it. E.g., switch to the folder of the Caravel top-level and view the generated GDSII layout with:
 
 ```

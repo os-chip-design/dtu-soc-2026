@@ -492,3 +492,14 @@ chisel-generate-fpga:
 
 chisel-test:
 	sbt test
+
+
+all:
+	git pull
+	git submodule update --init --recursive
+	make chisel-generate
+	cf harden RayTracerController
+	cf harden PicoMeshBigTop
+	cf harden CaravelUserProject
+	cf harden user_project_wrapper
+	cf precheck
