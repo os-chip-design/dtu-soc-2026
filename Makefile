@@ -491,6 +491,7 @@ chisel-generate-fpga:
 	sbt "runMain FpgaTop"
 
 chisel-test:
+	make -C picomesh comp
 	sbt test
 
 

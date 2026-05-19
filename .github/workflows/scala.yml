@@ -33,10 +33,10 @@ jobs:
           verilator \
           gcc-riscv64-unknown-elf \
           binutils-riscv64-unknown-elf
-    - name: Run tests
-      run: sbt test
     - name: Compile
       run: make chisel-generate
+    - name: Run tests
+      run: make chisel-test
 
   #Upload the generated Verilog so the synthesis workflow can use it
     - name: Upload generated Verilog
