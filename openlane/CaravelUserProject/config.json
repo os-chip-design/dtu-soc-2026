@@ -29,8 +29,8 @@
     "MAX_FANOUT_CONSTRAINT": 8,
     "PL_RESIZER_SETUP_SLACK_MARGIN": 0.4,
     "GRT_RESIZER_SETUP_SLACK_MARGIN": 0.2,
-    "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.5,
-    "PL_RESIZER_HOLD_SLACK_MARGIN": 1.0,
+    "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.8,
+    "PL_RESIZER_HOLD_SLACK_MARGIN": 1.2,
     "CTS_CLK_MAX_WIRE_LENGTH": 500,
     "MAGIC_DEF_LABELS": false,
     "SYNTH_ABC_BUFFERING": false,
@@ -126,14 +126,14 @@
                 },
                 "lc.imem.mem": {
                     "location": [
-                        2200,
+                        2280,
                         190
                     ],
                     "orientation": "N"
                 },
                 "lc.dmem.mem": {
                     "location": [
-                        2200,
+                        2280,
                         880
                     ],
                     "orientation": "N"
