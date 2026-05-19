@@ -14,7 +14,7 @@
         0,
         0,
         2825,
-        3480
+        3470
     ],
 
     "GRT_ANTENNA_MARGIN": 17,
@@ -159,7 +159,7 @@
         "RayTracerController": {
             "instances": {
                 "wc.rayController": {
-                    "location": [70, 1350],
+                    "location": [70, 1345],
                     "orientation": "N"
                 }
             },
@@ -173,7 +173,7 @@
         "PicoMeshBigTop": {
             "instances": {
                 "picoMesh": {
-                    "location": [70, 2260],
+                    "location": [70, 2250],
                     "orientation": "N"
                 }
             },

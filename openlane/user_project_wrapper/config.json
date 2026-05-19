@@ -30,7 +30,7 @@
             ],
             "instances": {
                 "top": {
-                    "location": [50, 30],
+                    "location": [50, 50],
                     "orientation": "N"
                 }
             },
