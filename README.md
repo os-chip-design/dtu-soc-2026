@@ -9,6 +9,30 @@
 
 </div>
 
+## The Student Chip Design Project
+
+This is the repository for the student chip design project for the course "System on Chip Design" at DTU in 2026 ([web page](https://github.com/os-chip-design/chip-design-intro)). The project involves designing a custom SoC using the Caravel user project template and integrating it with a Chisel-based RISC-V processor (Wildcat) and various peripherals.
+
+The project is in fabrication at ChipFoundry, through the Skywater 130nm process and will be available for testing and use by the students.
+
+### Content
+
+ 1. The RISC-V processor [Wildcat](https://github.com/schoeberl/wildcat)
+ 2. Two instruction memories initialized with a Wishbone bus from Caravel
+ 3. Data scratchpad memory implemented as an OpenRAM macro
+ 4. Data cache
+ 5. VGA controller with terminal functionallity
+ 6. a ray tracing accelerator as a co-processor
+ 7. A floating point unit
+ 8. A VGA clock
+ 9. A multicore system with 6 [PicoRV32](https://github.com/YosysHQ/picorv32) cores and two scratchpad memories connected via the [S4NoC](https://github.com/t-crest/soc-comm)
+ 10. A Wildcat core with an instruction memory initialized from an UART 
+
+This chip is 10 mm2 in size and will be fabricated in the Skywater 130nm process.
+### GDS Viewer
+
+ * [GDS View of the chip](https://os-chip-design.github.io/dtu-soc-2026/) via tiny Tapeout
+
 ## Chisel Project Setup
 
 This repository contains a starting point for integrating a Chisel project into the Caravel harness using Librelane.
