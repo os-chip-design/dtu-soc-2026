@@ -21,14 +21,15 @@ The project is in fabrication at ChipFoundry, through the Skywater 130nm process
  2. Two instruction memories initialized with a Wishbone bus from Caravel
  3. Data scratchpad memory implemented as an OpenRAM macro
  4. Data cache
- 5. VGA controller with terminal functionallity
- 6. a ray tracing accelerator as a co-processor
- 7. A floating point unit
+ 5. VGA controller with terminal functionality
+ 6. A ray tracing accelerator as a co-processor
+ 7. A floating-point unit
  8. A VGA clock
  9. A multicore system with 6 [PicoRV32](https://github.com/YosysHQ/picorv32) cores and two scratchpad memories connected via the [S4NoC](https://github.com/t-crest/soc-comm)
- 10. A Wildcat core with an instruction memory initialized from an UART 
+ 10. A Wildcat core with an instruction memory initialized from a UART
 
 This chip is 10 mm2 in size and will be fabricated in the Skywater 130nm process.
+
 ### GDS Viewer
 
  * [GDS View of the chip](https://os-chip-design.github.io/dtu-soc-2026/) via tiny Tapeout
@@ -73,8 +74,6 @@ make chisel-generate
 ```
 
 The project contains a fixed OpenRAM macro. To avoid picking up the default OpenRAM macro delete the macros from the PDK (in dependencies/...)
-
-```
 
 The Chisel top-level is hardened separately as a macro which is placed into the Caravel `user_project_wrapper`. The configuration files for both are located in the `openlane/` directory. They are hardened using the following commands:
 
@@ -202,7 +201,7 @@ Notes:
 - [x] Add a super simple test for the VideoController (Group 1)
 - [ ] Use 10 MHz in the design (UART, VGA)
 - [x] Booting from Wishbone (Group 6 and Group 3)
-- [ ] Adapt FPGA/VGA test to 10 MHz (Group 1)
+- [x] Adapt FPGA/VGA test to 10 MHz (Group 1)
 - [ ] Connect the UART and test
 - [x] Wildcat Caravel communication (Group 1)
 - [x] Reset port (Group 1)
